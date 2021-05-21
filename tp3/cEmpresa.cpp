@@ -32,13 +32,10 @@ void cEmpresa::retirar_deCirculacion(cVehiculo* vehiculoRetirado)
 
 void cEmpresa::realizarMantenimiento(cVehiculo* vehiculoMantenido)
 {
-	int dia;
-	time_t now = time(0);
-	tm* ltm = localtime(&now);
-	dia = ltm->tm_mday;
-	if (vehiculoMantenido != NULL) {
-		vehiculoMantenido
-			listavehiculos->
-		return paciente->ultima_visita.dia;
-	}
+	///???
+
+
+	
 }
+
+

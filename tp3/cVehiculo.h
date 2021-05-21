@@ -5,6 +5,8 @@
 #include "cFecha.h"
 using namespace std;
 
+typedef enum{cascos = 1, sillasSeguridad, portaEquipaje, asientosRebatibles}adicionales;
+
 class cVehiculo
 {
 	int patente;
@@ -22,6 +24,9 @@ public:
 		unsigned int tarifa, unsigned int cant);
 	~cVehiculo();
 	int CalcularTarifa();
-	
+	int getDia();
+	int getMes();
+	int getAnio();
+	virtual void agregarAdicionales();
 };
 

@@ -20,7 +20,18 @@ string cFecha::toString()
 	return to_string(dia) + '/' + to_string(mes) + '/' + to_string(anio);
 }
 
-string cFecha::getFecha()
+int cFecha::getDia()
 {
-	return toString();
+	return dia;
 }
+
+int cFecha::getMes()
+{
+	return mes;
+}
+
+int cFecha::getAnio()
+{
+	return anio;
+}
+

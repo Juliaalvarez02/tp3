@@ -27,6 +27,26 @@ int cVehiculo::CalcularTarifa()
 	costofinal = tarifa_base + (precioXdia * cantdias_alquilado);
 }
 
+int cVehiculo::getDia()
+{
+	return fecha_ult_mantenimiento->getDia();
+}
+
+int cVehiculo::getMes()
+{
+	return fecha_ult_mantenimiento->getMes();
+}
+
+int cVehiculo::getAnio()
+{
+	return fecha_ult_mantenimiento->getAnio();
+}
+
+void cVehiculo::agregarAdicionales()
+{
+	
+}
+
 
 
 

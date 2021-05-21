@@ -13,6 +13,8 @@ public:
 	cFecha(int dia, int mes, int anio);
 	~cFecha();
 	string toString();
-	string getFecha();
+	int getDia();
+	int getMes();
+	int getAnio();
 };
 
