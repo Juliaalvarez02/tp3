@@ -131,8 +131,6 @@
     <ClCompile Include="cFecha.cpp" />
     <ClCompile Include="cLista.cpp" />
     <ClCompile Include="cListaalquileres.cpp" />
-    <ClCompile Include="cListaclientes.cpp" />
-    <ClCompile Include="cListavehiculos.cpp" />
     <ClCompile Include="cMotocicleta.cpp" />
     <ClCompile Include="cTrafics.cpp" />
     <ClCompile Include="cVehiculo.cpp" />
@@ -146,8 +144,6 @@
     <ClInclude Include="cFecha.h" />
     <ClInclude Include="cLista.h" />
     <ClInclude Include="cListaalquileres.h" />
-    <ClInclude Include="cListaclientes.h" />
-    <ClInclude Include="cListavehiculos.h" />
     <ClInclude Include="cMotocicleta.h" />
     <ClInclude Include="cTrafics.h" />
     <ClInclude Include="cVehiculo.h" />

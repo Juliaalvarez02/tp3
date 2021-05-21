@@ -91,7 +91,7 @@ inline T * cLista<T>::quitarEnPos(unsigned int pos)
 		throw new exception("posicion invalida");
 	}
 	T*aux = lista[pos];
-	for (unsigned int i = 0; i < CA - 1; i++) {
+	for (unsigned int i = pos; i < CA - 1; i++) {
 		lista[i] = lista[i + 1];
 	}
 	lista[CA - 1] = NULL;

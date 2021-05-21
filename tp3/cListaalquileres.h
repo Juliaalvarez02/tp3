@@ -6,7 +6,7 @@ class cListaalquileres :
 	public cLista<cAlquiler>
 {
 public:
-	cListaalquileres();
+	cListaalquileres(unsigned int tam=NMAX);
 	~cListaalquileres();
 };
 
