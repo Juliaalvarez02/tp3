@@ -4,7 +4,7 @@
 #include "cVehiculo.h"
 
 class cEmpresa
-{
+{//intento
 	cLista<cCliente>*listaclientes;
 	cLista<cVehiculo>*listavehiculos;
 
