@@ -1,6 +1,6 @@
 #pragma once
 #include "cVehiculo.h"
-class cAutomovil :
+class cAutomovil : //hola
 	protected cVehiculo
 {
 public:
