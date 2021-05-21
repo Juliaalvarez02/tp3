@@ -4,7 +4,7 @@ cAlquiler::cAlquiler()
 {
 }
 
-cAlquiler::cAlquiler(string Cliente, cVehiculo* vehiculo, int cant, cFecha *fechai, cFecha *fechaf, int monto)
+cAlquiler::cAlquiler(string Cliente, int cant, int monto)
 {
 	cliente = Cliente;
 	vehiculoalquilado = NULL;

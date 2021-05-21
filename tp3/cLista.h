@@ -15,7 +15,7 @@ public:
 	bool agregarItem(T*item);
 	T*buscaritem(T*item);
 	T*quitarItem(T*item);
-	T*quitarEnPos(unsigned int pos);////////////////////////////preguntar a flor
+	T*quitarEnPos(unsigned int pos);
 	void Eliminar(T*item);
 	unsigned int getItempos(T*item);
 	void eliminar(unsigned int pos);

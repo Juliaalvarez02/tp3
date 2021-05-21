@@ -13,7 +13,7 @@ class cAlquiler
 	int monto_total;
 public:
 	cAlquiler();
-	cAlquiler(string Cliente, cVehiculo *vehiculo, int cant, cFecha *fechai, cFecha *fechaf, int monto);
+	cAlquiler(string Cliente,int cant, int monto);
 	~cAlquiler();
 };
 

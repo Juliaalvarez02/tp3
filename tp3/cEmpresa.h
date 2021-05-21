@@ -4,10 +4,10 @@
 #include "cVehiculo.h"
 
 class cEmpresa
-{//intento
+{
 	cLista<cCliente>*listaclientes;
 	cLista<cVehiculo>*listavehiculos;
-
+	cListaalquileres* lista_alquiler;
 public:
 	cEmpresa();
 	~cEmpresa();
