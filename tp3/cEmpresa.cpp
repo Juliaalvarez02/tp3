@@ -12,7 +12,7 @@ cEmpresa::cEmpresa()
 
 cEmpresa::~cEmpresa()
 {
-	for (int i = 0; i < listaclientes->getCA; i++) {
+	for (int i = 0; i < listaclientes->getCA(); i++) {
 		delete listaclientes;
 	}
 }
