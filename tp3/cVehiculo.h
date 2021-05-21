@@ -22,5 +22,6 @@ public:
 		unsigned int tarifa, unsigned int cant);
 	~cVehiculo();
 	int CalcularTarifa();
+	
 };
 

@@ -14,3 +14,13 @@ cFecha::cFecha(int dia, int mes, int anio)
 cFecha::~cFecha()
 {
 }
+
+string cFecha::toString()
+{
+	return to_string(dia) + '/' + to_string(mes) + '/' + to_string(anio);
+}
+
+string cFecha::getFecha()
+{
+	return toString();
+}
