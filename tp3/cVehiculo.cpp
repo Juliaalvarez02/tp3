@@ -4,7 +4,7 @@ cVehiculo::cVehiculo()
 {
 }
 
-cVehiculo::cVehiculo(int patente, string color, int num_chasis, int num_poliza, cFecha *fecha, int precio, int capacidad, unsigned int tarifa, unsigned int cant)
+cVehiculo::cVehiculo(int patente, string color, int num_chasis, int num_poliza, int precio, int capacidad, unsigned int tarifa, unsigned int cant)
 {
 	this->patente = patente;
 	this->color = color;

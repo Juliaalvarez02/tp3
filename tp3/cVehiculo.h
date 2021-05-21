@@ -18,7 +18,7 @@ class cVehiculo
 	unsigned int cantdias_alquilado;
 public:
 	cVehiculo();
-	cVehiculo(int patente, string color, int num_chasis, int num_poliza, cFecha *fecha, int precio, int capacidad, 
+	cVehiculo(int patente, string color, int num_chasis, int num_poliza, int precio, int capacidad, 
 		unsigned int tarifa, unsigned int cant);
 	~cVehiculo();
 	int CalcularTarifa();
