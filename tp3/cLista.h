@@ -17,7 +17,7 @@ public:
 	T*quitarItem(T*item);
 	T*quitarEnPos(unsigned int pos);
 	void Eliminar(T*item);
-	unsigned int getItempos(T*item);
+	unsigned int getItempos(T* item);
 	void eliminar(unsigned int pos);
 	unsigned int getCA();
 	unsigned int getTam();
@@ -26,8 +26,8 @@ public:
 template<class T>
 inline cLista<T>::cLista(unsigned int tam)
 {
-	lista = new lista*[tam];
-	for (unsigned int = 0; i < tam; i++) {
+	lista = new T*[tam];
+	for (unsigned int i = 0; i < tam; i++) {
 		lista[i] = NULL;
 	}
 	this->tam = tam;
@@ -106,7 +106,7 @@ inline void cLista<T>::Eliminar(T * item)
 }
 
 template<class T>
-inline unsigned int cLista<T>::getItempos(T * item)
+inline unsigned int cLista<T>::getItempos(T* item)
 {
 	for (unsigned int i = 0; i < CA; i++) {
 		if ((*lista[i]) == (*item)) {

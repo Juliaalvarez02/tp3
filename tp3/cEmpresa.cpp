@@ -32,10 +32,10 @@ void cEmpresa::retirar_deCirculacion(cVehiculo* vehiculoRetirado)
 
 void cEmpresa::realizarMantenimiento(cVehiculo* vehiculoMantenido)
 {
-	///???
-
-
-	
+	for (int i = 0; i < listavehiculos->getCA(); i++) {
+		listavehiculos[i].buscaritem(vehiculoMantenido);
+		vehiculoMantenido->cambiarFecha();
+	}
 }
 
 

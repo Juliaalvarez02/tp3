@@ -2,6 +2,7 @@
 #include <string>
 #include <iostream>
 #include <stdio.h>
+#include <ctime>
 #include "cFecha.h"
 using namespace std;
 
@@ -24,6 +25,8 @@ public:
 		unsigned int tarifa, unsigned int cant);
 	~cVehiculo();
 	int CalcularTarifa();
+	cFecha* cambiarFecha();
+	int getPatente();
 	int getDia();
 	int getMes();
 	int getAnio();

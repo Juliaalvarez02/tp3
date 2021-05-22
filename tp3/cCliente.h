@@ -7,11 +7,13 @@ using namespace std;
 class cCliente
 {
 	string nombre;
-	cFecha fechadealquiler;
-	cVehiculo vehiculo_alquilado;
+	cFecha *fechadealquiler;
+	cVehiculo *vehiculo_alquilado;
 public:
 	cCliente();
-	cCliente(string nombre, cFecha fecha, cVehiculo vehiculo);
+	cCliente(string nombre);
 	~cCliente();
+	string toString();
+	void imprimir();
 };
 

@@ -4,13 +4,25 @@ cCliente::cCliente()
 {
 }
 
-cCliente::cCliente(string nombre, cFecha fecha, cVehiculo vehiculo)
+cCliente::cCliente(string nombre)
 {
 	this->nombre = nombre;
-	fechadealquiler = fecha;
-	vehiculo_alquilado = vehiculo;
+	fechadealquiler = NULL;
+	vehiculo_alquilado = NULL;
 }
 
 cCliente::~cCliente()
 {
+}
+
+string cCliente::toString()
+{
+	return "Cliente: " + nombre + "Fecha de alquiler: " + to_string(fechadealquiler->getDia()) + "/" +
+		to_string(fechadealquiler->getMes()) + "/" + to_string(fechadealquiler->getAnio()) + "Patente: " +
+		to_string(vehiculo_alquilado->getPatente());
+}
+
+void cCliente::imprimir()
+{
+	cout << toString() << endl;
 }

@@ -15,6 +15,7 @@ public:
 	cAlquiler();
 	cAlquiler(string Cliente,int cant, int monto);
 	~cAlquiler();
-	
+	string toString();
+	void imprimir();
 };
 

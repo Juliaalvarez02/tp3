@@ -25,6 +25,30 @@ int cVehiculo::CalcularTarifa()
 {
 	int costofinal;
 	costofinal = tarifa_base + (precioXdia * cantdias_alquilado);
+	return costofinal;
+}
+
+
+cFecha* cVehiculo::cambiarFecha()
+{
+	int dia = fecha_ult_mantenimiento->getDia();
+	int mes = fecha_ult_mantenimiento->getMes();
+	int anio = fecha_ult_mantenimiento->getAnio();
+
+	if (fecha_ult_mantenimiento != NULL) {
+		time_t now = time(0);
+		tm* ltm = localtime(&now);
+		dia = ltm->tm_mday;
+		mes = 1 + ltm->tm_mon;
+		anio = 1900 + ltm->tm_year;
+	}
+	
+	return fecha_ult_mantenimiento;
+}
+
+int cVehiculo::getPatente()
+{
+	return patente;
 }
 
 int cVehiculo::getDia()
