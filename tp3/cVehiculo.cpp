@@ -48,10 +48,10 @@ cFecha* cVehiculo::cambiarFecha()
 	return fecha_ult_mantenimiento;
 }
 
-//unsigned int cVehiculo::getPrecioAdicional()
-//{
-//	return precioAdicional;
-//}
+unsigned int cVehiculo::getPrecioAdicional()
+{
+	return precioAdicional;
+}
 
 string cVehiculo::getPatente()
 {
@@ -65,23 +65,50 @@ int cVehiculo::getPrecio()
 
 int cVehiculo::getDia()
 {
-	return fecha_ult_mantenimiento->getDia();
+	if (fecha_ult_mantenimiento != NULL) {
+		return fecha_ult_mantenimiento->getDia();
+	}
 }
 
 int cVehiculo::getMes()
 {
-	return fecha_ult_mantenimiento->getMes();
+	if (fecha_ult_mantenimiento != NULL) {
+		return fecha_ult_mantenimiento->getMes();
+	}
 }
 
 int cVehiculo::getAnio()
 {
-	return fecha_ult_mantenimiento->getAnio();
+	if (fecha_ult_mantenimiento != NULL) {
+		return fecha_ult_mantenimiento->getAnio();
+	}
+	
 }
 
 int cVehiculo::agregarAdicionales()
 {
 	int adicionales = 0;
 	return adicionales;
+}
+
+void cVehiculo::pasosMantenimiento()
+{
+	cout << "Pasos mantenimiento: " << endl;
+	cout << "\nP1" << "\nP2" << "\nP3" << endl;
+}
+
+string cVehiculo::toString()
+{
+	return "Patente: " + patente + "\nColor: " + color + "Numero de chasis: " + to_string(num_chasis) +
+		"\nNumero de poliza: " + to_string(num_poliza)  + "\nPrecio por dia: " + to_string(precioXdia) +
+		"\nCapacidad de pasajeros: " + to_string(capacidad_pasajeros) + "\nTarifa base: " + to_string(tarifa_base)
+		+ "Cantidad de dias alquilado: " + to_string(cantdias_alquilado);
+
+}
+
+void cVehiculo::imprimir()
+{
+	cout << toString() << endl;
 }
 
 

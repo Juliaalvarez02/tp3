@@ -20,7 +20,7 @@ class cVehiculo
 	int capacidad_pasajeros;
 	unsigned int tarifa_base;
 	unsigned int cantdias_alquilado;
-	//unsigned int precioAdicional;
+	unsigned int precioAdicional;
 public:
 	cVehiculo();
 	cVehiculo(string patente, string color, int num_chasis, int num_poliza, int precio, int capacidad,
@@ -35,5 +35,8 @@ public:
 	int getMes();
 	int getAnio();
 	virtual int agregarAdicionales();
+	virtual void pasosMantenimiento();
+	string toString();
+	void imprimir();
 };
 

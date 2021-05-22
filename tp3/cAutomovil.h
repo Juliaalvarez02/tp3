@@ -8,5 +8,6 @@ public:
 		int capacidad, unsigned int tarifa, unsigned int cant);
 	~cAutomovil();
 	virtual int agregarAdicionales();
+	virtual void pasosMantenimiento();
 };
 

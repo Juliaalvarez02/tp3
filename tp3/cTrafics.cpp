@@ -9,3 +9,10 @@ cTrafics::cTrafics(string patente, string color, int num_chasis, int num_poliza,
 cTrafics::~cTrafics()
 {
 }
+
+void cTrafics::pasosMantenimiento()
+{
+	cout << "\nPasos mantenimiento automovil: " << endl;
+	cout << "\nPirulito 1" << "\nPirulito 2" << "\nPirulito 3" << endl;
+	cambiarFecha();
+}

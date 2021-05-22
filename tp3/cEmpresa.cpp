@@ -38,10 +38,8 @@ void cEmpresa::realizarMantenimiento(cVehiculo* vehiculoMantenido)
 	}
 }
 
-void cEmpresa::pasosMantenimiento()
-{
-	cout << "Pasos mantenimiento: " << endl;
-	cout << "\nP1" << "\nP2" << "\nP3" << endl;
-}
+
+
+
 
 

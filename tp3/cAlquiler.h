@@ -17,5 +17,7 @@ public:
 	~cAlquiler();
 	string toString();
 	void imprimir();
+	cVehiculo* getVehiculo();
+
 };
 

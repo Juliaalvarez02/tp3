@@ -8,5 +8,6 @@ class cListaalquileres :
 public:
 	cListaalquileres(unsigned int tam=NMAX);
 	~cListaalquileres();
+	//void listarXtipo();
 };
 

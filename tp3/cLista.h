@@ -66,7 +66,7 @@ template<class T>
 inline T * cLista<T>::buscaritem(T * item)
 {
 	for (unsigned int i = 0; i < CA; i++) {
-		if ((*lista[i]) == (*item)) {
+		if (lista[i] == item) {
 			return lista[i];
 		}
 	}
@@ -109,7 +109,7 @@ template<class T>
 inline unsigned int cLista<T>::getItempos(T* item)
 {
 	for (unsigned int i = 0; i < CA; i++) {
-		if ((*lista[i]) == (*item)) {
+		if (lista[i] == item) {
 			return i;
 		}
 	}

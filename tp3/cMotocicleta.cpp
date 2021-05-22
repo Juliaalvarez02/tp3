@@ -9,3 +9,11 @@ cMotocicleta::cMotocicleta(string patente, string color, int num_chasis, int num
 cMotocicleta::~cMotocicleta()
 {
 }
+
+void cMotocicleta::pasosMantenimiento()
+{
+	cout << "\nPasos mantenimiento automovil: " << endl;
+	cout << "\nPirulito 1" << "\nPirulito 2" << "\nPirulito 3" << endl;
+	cambiarFecha();
+	cout << "Fecha: " << to_string(getDia()) + "/" + to_string(getMes()) + "/" + to_string(getAnio());
+}

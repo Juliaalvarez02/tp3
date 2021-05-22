@@ -31,3 +31,10 @@ void cAlquiler::imprimir()
 {
 	cout << toString() << endl;
 }
+
+cVehiculo* cAlquiler::getVehiculo()
+{
+	return vehiculoalquilado;
+}
+
+
