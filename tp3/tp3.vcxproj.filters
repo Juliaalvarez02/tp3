@@ -48,6 +48,9 @@
     <ClCompile Include="cListaalquileres.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cVehiculo.h">
@@ -81,6 +84,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="cListaalquileres.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

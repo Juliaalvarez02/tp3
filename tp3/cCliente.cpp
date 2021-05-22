@@ -19,7 +19,7 @@ string cCliente::toString()
 {
 	return "Cliente: " + nombre + "Fecha de alquiler: " + to_string(fechadealquiler->getDia()) + "/" +
 		to_string(fechadealquiler->getMes()) + "/" + to_string(fechadealquiler->getAnio()) + "Patente: " +
-		to_string(vehiculo_alquilado->getPatente());
+		vehiculo_alquilado->getPatente();
 }
 
 void cCliente::imprimir()

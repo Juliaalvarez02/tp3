@@ -5,7 +5,7 @@ cVehiculo::cVehiculo()
 {
 }
 
-cVehiculo::cVehiculo(int patente, string color, int num_chasis, int num_poliza, int precio, int capacidad, 
+cVehiculo::cVehiculo(string patente, string color, int num_chasis, int num_poliza, int precio, int capacidad,
 	unsigned int tarifa, unsigned int cant)
 {
 	this->patente = patente;
@@ -53,7 +53,7 @@ cFecha* cVehiculo::cambiarFecha()
 //	return precioAdicional;
 //}
 
-int cVehiculo::getPatente()
+string cVehiculo::getPatente()
 {
 	return patente;
 }

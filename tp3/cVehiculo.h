@@ -11,7 +11,7 @@ typedef enum{cascos = 1, sillasSeguridad, portaEquipaje, asientosRebatibles}adic
 
 class cVehiculo
 {
-	int patente;
+	string patente;
 	string color;
 	int num_chasis;
 	int num_poliza;
@@ -23,13 +23,13 @@ class cVehiculo
 	//unsigned int precioAdicional;
 public:
 	cVehiculo();
-	cVehiculo(int patente, string color, int num_chasis, int num_poliza, int precio, int capacidad, 
+	cVehiculo(string patente, string color, int num_chasis, int num_poliza, int precio, int capacidad,
 		unsigned int tarifa, unsigned int cant);
 	~cVehiculo();
 	int CalcularTarifa();
 	cFecha* cambiarFecha();
 	unsigned int getPrecioAdicional();
-	int getPatente();
+	string getPatente();
 	int getPrecio();
 	int getDia();
 	int getMes();

@@ -134,6 +134,7 @@
     <ClCompile Include="cMotocicleta.cpp" />
     <ClCompile Include="cTrafics.cpp" />
     <ClCompile Include="cVehiculo.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="cAlquiler.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="cMotocicleta.h" />
     <ClInclude Include="cTrafics.h" />
     <ClInclude Include="cVehiculo.h" />
+    <ClInclude Include="Includes.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
