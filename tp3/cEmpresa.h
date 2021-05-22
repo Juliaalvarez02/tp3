@@ -15,6 +15,7 @@ public:
 	void adquirirNuevosVehiculos(cVehiculo* nuevoVehiculo);
 	void retirar_deCirculacion(cVehiculo* vehiculoRetirado);
 	void realizarMantenimiento(cVehiculo* vehiculoMantenido);
+	virtual void pasosMantenimiento();
 	
 };
 

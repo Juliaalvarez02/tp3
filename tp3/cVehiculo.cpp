@@ -1,10 +1,12 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "cVehiculo.h"
 
 cVehiculo::cVehiculo()
 {
 }
 
-cVehiculo::cVehiculo(int patente, string color, int num_chasis, int num_poliza, int precio, int capacidad, unsigned int tarifa, unsigned int cant)
+cVehiculo::cVehiculo(int patente, string color, int num_chasis, int num_poliza, int precio, int capacidad, 
+	unsigned int tarifa, unsigned int cant)
 {
 	this->patente = patente;
 	this->color = color;
@@ -46,9 +48,19 @@ cFecha* cVehiculo::cambiarFecha()
 	return fecha_ult_mantenimiento;
 }
 
+//unsigned int cVehiculo::getPrecioAdicional()
+//{
+//	return precioAdicional;
+//}
+
 int cVehiculo::getPatente()
 {
 	return patente;
+}
+
+int cVehiculo::getPrecio()
+{
+	return precioXdia;
 }
 
 int cVehiculo::getDia()
@@ -66,10 +78,13 @@ int cVehiculo::getAnio()
 	return fecha_ult_mantenimiento->getAnio();
 }
 
-void cVehiculo::agregarAdicionales()
+int cVehiculo::agregarAdicionales()
 {
-	
+	int adicionales = 0;
+	return adicionales;
 }
+
+
 
 
 

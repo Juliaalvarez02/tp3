@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNING
 #pragma once
 #include <string>
 #include <iostream>
@@ -19,6 +20,7 @@ class cVehiculo
 	int capacidad_pasajeros;
 	unsigned int tarifa_base;
 	unsigned int cantdias_alquilado;
+	//unsigned int precioAdicional;
 public:
 	cVehiculo();
 	cVehiculo(int patente, string color, int num_chasis, int num_poliza, int precio, int capacidad, 
@@ -26,10 +28,12 @@ public:
 	~cVehiculo();
 	int CalcularTarifa();
 	cFecha* cambiarFecha();
+	unsigned int getPrecioAdicional();
 	int getPatente();
+	int getPrecio();
 	int getDia();
 	int getMes();
 	int getAnio();
-	virtual void agregarAdicionales();
+	virtual int agregarAdicionales();
 };
 
