@@ -4,11 +4,11 @@ cFecha::cFecha()
 {
 }
 
-cFecha::cFecha(int dia, int mes, int anio)
+cFecha::cFecha(int Dia, int Mes, int Anio)
 {
-	this->dia = dia;
-	this->mes = mes;
-	this->anio = anio;
+	dia = Dia;
+	mes = Mes;
+	anio = Anio;
 }
 
 cFecha::~cFecha()

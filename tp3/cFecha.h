@@ -10,7 +10,7 @@ class cFecha
 	int anio;
 public:
 	cFecha();
-	cFecha(int dia, int mes, int anio);
+	cFecha(int Dia, int Mes, int Anio);
 	~cFecha();
 	string toString();
 	int getDia();
