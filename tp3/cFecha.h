@@ -5,6 +5,7 @@ using namespace std;
 
 class cFecha
 {
+	friend class cVehiculo;
 	int dia;
 	int mes;
 	int anio;

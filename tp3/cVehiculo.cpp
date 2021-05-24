@@ -67,7 +67,7 @@ int cVehiculo::getPrecio()
 
 int cVehiculo::getDia()
 {
-	if (fecha_ult_mantenimiento != NULL) {
+	if (fecha_ult_mantenimiento == NULL) {
 		return fecha_ult_mantenimiento->getDia();
 	}
 }

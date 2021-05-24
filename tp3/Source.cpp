@@ -6,10 +6,12 @@ int main() {
 	cVehiculo* vehiculo3 = new cVehiculo("CC333CC", "blanco", 150, 102, 25000, 7, 5000, 10, &cFecha(10, 3, 2021));
 	cMotocicleta* moto = new cMotocicleta("DD222DD", "gris", 20, 103, 18500, 5, 4300, 6, &cFecha(10, 3, 2021));
 
+	vehiculo1->getDia();
 	vehiculo1->imprimir();
 	vehiculo2->imprimir();
 	vehiculo3->CalcularTarifa();
 	moto->pasosMantenimiento();
 	
+
 	
 }
