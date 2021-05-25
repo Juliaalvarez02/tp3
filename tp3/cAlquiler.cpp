@@ -37,4 +37,24 @@ cVehiculo* cAlquiler::getVehiculo()
 	return vehiculoalquilado;
 }
 
+int cAlquiler::calcularTarifa(adicionales adicional)
+{
+	switch (adicional) {
+	case cascos:
+		monto_total = vehiculoalquilado->getTarifaBase() + ((vehiculoalquilado->getPrecioxDia() + precioCasco)*cant_dias_alquilado);
+		break;
+	case sillasSeguridad:
+		monto_total = vehiculoalquilado->getTarifaBase() + ((vehiculoalquilado->getPrecioxDia() + preciosilla)*cant_dias_alquilado);
+		break;
+
+	case portaEquipaje:
+		monto_total = vehiculoalquilado->getTarifaBase() + ((vehiculoalquilado->getPrecioxDia() + precioPortaEquipaje)*cant_dias_alquilado);
+		break;
+	case asientosRebatibles:
+		monto_total = vehiculoalquilado->getTarifaBase() + ((vehiculoalquilado->getPrecioxDia() + precioAsientosRebatibles)*cant_dias_alquilado);
+		break;
+	}
+	return monto_total;
+}
+
 
