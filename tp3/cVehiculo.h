@@ -2,12 +2,10 @@
 #pragma once
 #include <string>
 #include <iostream>
-#include <stdio.h>
 #include <ctime>
 #include "cFecha.h"
+#include <chrono>
 using namespace std;
-
-typedef enum{cascos = 1, sillasSeguridad, portaEquipaje, asientosRebatibles}adicionales;
 
 class cVehiculo
 {
@@ -18,23 +16,16 @@ class cVehiculo
 	cFecha *fecha_ult_mantenimiento;
 	int precioXdia;
 	int capacidad_pasajeros;
-	unsigned int tarifa_base;
 	unsigned int cantdias_alquilado;
-	unsigned int precioAdicional;
+	unsigned int tarifaBase;
 public:
 	cVehiculo();
-	cVehiculo(string patente, string color, int num_chasis, int num_poliza, int precio, int capacidad,
-		unsigned int tarifa, unsigned int cant, cFecha* fecha_ult_mantenimiento);
+	cVehiculo(string patente, string color, int num_chasis, int num_poliza, int precio, int capacidad, unsigned int tarifa, cFecha* fecha_ult_mantenimiento);
 	~cVehiculo();
-	int CalcularTarifa();
-	cFecha* cambiarFecha();
-	unsigned int getPrecioAdicional();
+	void cambiarFecha();
+	unsigned int getTarifaBase();
 	string getPatente();
-	int getPrecio();
-	int getDia();
-	int getMes();
-	int getAnio();
-	virtual int agregarAdicionales();
+	int getPrecioxDia();
 	virtual void pasosMantenimiento();
 	string toString();
 	void imprimir();
