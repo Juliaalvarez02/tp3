@@ -16,11 +16,11 @@ class cVehiculo
 	cFecha *fecha_ult_mantenimiento;
 	int precioXdia;
 	int capacidad_pasajeros;
-	unsigned int cantdias_alquilado;
 	unsigned int tarifaBase;
 public:
 	cVehiculo();
-	cVehiculo(string patente, string color, int num_chasis, int num_poliza, int precio, int capacidad, unsigned int tarifa, cFecha* fecha_ult_mantenimiento);
+	cVehiculo(string patente, string color, int num_chasis, int num_poliza, int precio, int capacidad,
+		unsigned int tarifa, cFecha* fecha_ult_mantenimiento);
 	~cVehiculo();
 	void cambiarFecha();
 	unsigned int getTarifaBase();

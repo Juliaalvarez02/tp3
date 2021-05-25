@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 #define NMAX 10
 using namespace std;
 template <class T>
@@ -24,6 +25,7 @@ public:
 	string toString();
 	T* operator[](unsigned int pos);
 	T* operator+(T* item);
+	//void listar(cVehiculo* vehiculoAimprimir);
 };
 
 template<class T>
@@ -148,6 +150,10 @@ inline unsigned int cLista<T>::getTam()
 template<class T>
 inline string cLista<T>::toString()
 {
+
+	for (int i = 0; i < CA; i++) {
+		lista[i]->toString();
+	}
 	return to_string(lista);
 }
 
@@ -157,6 +163,7 @@ void operator<<(ostream& o, cLista<T>& object)
 	o << object.toString() << endl;
 }
 
+
 template<class T>
 inline T* cLista<T>::operator[](unsigned int pos) {
 	return lista[pos];
@@ -165,6 +172,7 @@ inline T* cLista<T>::operator[](unsigned int pos) {
 template<class T>
 inline T* cLista<T>::operator+(T* item)
 {
-	return lista + agregarItem(item);
+	return lista[CA] + agregarItem(item);
 }
+
 
