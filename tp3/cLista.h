@@ -150,11 +150,11 @@ inline unsigned int cLista<T>::getTam()
 template<class T>
 inline string cLista<T>::toString()
 {
-
+	string miString;
 	for (int i = 0; i < CA; i++) {
-		lista[i]->toString();
+		miString += lista[i]->toString();
 	}
-	return to_string(lista);
+	return miString;
 }
 
 template<class T>
