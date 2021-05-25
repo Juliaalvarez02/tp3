@@ -35,6 +35,7 @@ void cVehiculo::cambiarFecha()
 		mes = 1 + ltm->tm_mon;
 		anio = 1900 + ltm->tm_year;
 	}
+
 }
 
 unsigned int cVehiculo::getTarifaBase()
