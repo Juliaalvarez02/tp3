@@ -16,7 +16,6 @@ class cVehiculo
 	cFecha *fecha_ult_mantenimiento;
 	int precioXdia;
 	int capacidad_pasajeros;
-	unsigned int cantdias_alquilado;
 	unsigned int tarifaBase;
 public:
 	cVehiculo();

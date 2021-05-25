@@ -24,6 +24,7 @@ public:
 	string toString();
 	T* operator[](unsigned int pos);
 	T* operator+(T* item);
+	//void listar(cVehiculo* vehiculoAimprimir);
 };
 
 template<class T>
@@ -151,11 +152,11 @@ inline string cLista<T>::toString()
 	return to_string(lista);
 }
 
-template<class T>
-void operator<<(ostream& o, cLista<T>& object)
-{
-	o << object.toString() << endl;
-}
+//template<class T>
+//void operator<<(ostream& o, cLista<T>& object)
+//{
+//	o << object.toString() << endl;
+//}
 
 template<class T>
 inline T* cLista<T>::operator[](unsigned int pos) {
@@ -168,3 +169,27 @@ inline T* cLista<T>::operator+(T* item)
 	return lista + agregarItem(item);
 }
 
+//template<class T>
+//inline void cLista<T>::listar(cVehiculo* vehiculoAimprimir)
+//{
+//	cMotocicleta* motocicleta;
+//	cCamioneta* camioneta;
+//	cAutomovil* automovil;
+//	cTrafics* trafics;
+//
+//	for (int i = 0; i < CA; i++) {
+//		motocicleta[i] = NULL;
+//		camioneta[i] = NULL;
+//		automovil[i] = NULL;
+//		trafics[i] = NULL;
+//	}
+//
+//	switch (vehiculoAimprimir) {
+//	case motocicleta:
+//		for (int i = 0; i < CA; i++) {
+//			if (lista[i] == NULL)
+//				return;
+//			cVehiculo* v= lista[i]->
+//		}
+//	}
+//}

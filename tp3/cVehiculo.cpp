@@ -11,7 +11,7 @@ cVehiculo::cVehiculo(string patente, string color, int num_chasis, int num_poliz
 	this->color = color;
 	this->num_chasis = num_chasis;
 	this->num_poliza = num_poliza;
-	fecha_ult_mantenimiento = NULL;
+	this->fecha_ult_mantenimiento = fecha_ult_mantenimiento;
 	precioXdia = precio;
 	capacidad_pasajeros = capacidad;
 	tarifaBase = tarifa;
@@ -25,15 +25,18 @@ void cVehiculo::cambiarFecha()
 {
 
 	if (fecha_ult_mantenimiento != NULL) {
-		int dia = fecha_ult_mantenimiento->getDia();
+		/*int dia = fecha_ult_mantenimiento->getDia();
 		int mes = fecha_ult_mantenimiento->getMes();
-		int anio = fecha_ult_mantenimiento->getAnio();
-
+		int anio = fecha_ult_mantenimiento->getAnio();*/
+		int dia, mes, anio;
 		time_t now = time(0);
 		tm* ltm = localtime(&now);
 		dia = ltm->tm_mday;
 		mes = 1 + ltm->tm_mon;
 		anio = 1900 + ltm->tm_year;
+		fecha_ult_mantenimiento->dia = dia;
+		fecha_ult_mantenimiento->mes = mes;
+		fecha_ult_mantenimiento->anio = anio;
 	}
 
 }
@@ -64,9 +67,8 @@ string cVehiculo::toString()
 	return "Patente: " + patente + "\nColor: " + color + "Numero de chasis: " + to_string(num_chasis) +
 		"\nNumero de poliza: " + to_string(num_poliza) + "\nPrecio por dia: " + to_string(precioXdia) +
 		"\nCapacidad de pasajeros: " + to_string(capacidad_pasajeros) + "\nTarifa base: " + to_string(tarifaBase)
-		+ "\nCantidad de dias alquilado: " + to_string(cantdias_alquilado) + "\nFecha de ultimo mantenimiento: " +
-		to_string(fecha_ult_mantenimiento->getDia()) + "/" + to_string(fecha_ult_mantenimiento->getMes()) + "/" +
-		to_string(fecha_ult_mantenimiento->getAnio());
+	    + "\nFecha de ultimo mantenimiento: " + to_string(fecha_ult_mantenimiento->getDia()) + "/" 
+		+ to_string(fecha_ult_mantenimiento->getMes()) + "/" + to_string(fecha_ult_mantenimiento->getAnio());
 
 }
 
