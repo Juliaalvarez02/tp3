@@ -18,6 +18,5 @@ public:
 	string toString();
 	void imprimir();
 	cVehiculo* getVehiculo();
-
 };
 

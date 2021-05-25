@@ -9,12 +9,11 @@ cListaalquileres::~cListaalquileres()
 {
 }
 
-//void cListaalquileres::listarXtipo()
-//{
-//	for (int i = 0; i < CA; i++) {
-//		if(lista[i]->getVehiculo() ==);
-//	}
-//	
-//}
+void cListaalquileres::listarXtipo()
+{
+	
+}
+
+
 
 
