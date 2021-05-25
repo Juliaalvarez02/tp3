@@ -9,6 +9,7 @@ class cEmpresa
 	cLista<cCliente>*listaclientes;
 	cLista<cVehiculo>*listavehiculos;
 	cListaalquileres* lista_alquiler;
+	
 public:
 	cEmpresa();
 	~cEmpresa();

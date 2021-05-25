@@ -64,7 +64,7 @@ void cVehiculo::pasosMantenimiento()
 
 string cVehiculo::toString()
 {
-	return "Patente: " + patente + "\nColor: " + color + "Numero de chasis: " + to_string(num_chasis) +
+	return "Patente: " + patente + "\nColor: " + color + "\nNumero de chasis: " + to_string(num_chasis) +
 		"\nNumero de poliza: " + to_string(num_poliza) + "\nPrecio por dia: " + to_string(precioXdia) +
 		"\nCapacidad de pasajeros: " + to_string(capacidad_pasajeros) + "\nTarifa base: " + to_string(tarifaBase)
 	    + "\nFecha de ultimo mantenimiento: " + to_string(fecha_ult_mantenimiento->getDia()) + "/" 

@@ -4,14 +4,15 @@ cAlquiler::cAlquiler()
 {
 }
 
-cAlquiler::cAlquiler(string Cliente, int cant, int monto)
+cAlquiler::cAlquiler(string Cliente, int cantAd, int cantDias, cVehiculo* vehiculoalquilado, cFecha* fecha_inicio, cFecha* fecha_findereserva)
 {
 	cliente = Cliente;
-	vehiculoalquilado = NULL;
-	cant_adicionales = cant;
-	fecha_inicio = NULL;
-	fecha_findereserva = NULL;
-	monto_total = monto;
+	this->vehiculoalquilado = vehiculoalquilado;
+	cant_adicionales = cantAd;
+	this->fecha_inicio = fecha_inicio;
+	this->fecha_findereserva = fecha_findereserva;
+	monto_total = 0;
+	cant_dias_alquilado = cantDias;
 }
 
 cAlquiler::~cAlquiler()
@@ -23,7 +24,7 @@ string cAlquiler::toString()
 	return "Cliente: " + cliente + "\nPatente del vehiculo alquilado: " + vehiculoalquilado->getPatente()
 		+ "\nCantidad de elementos adicionales: " + to_string(cant_adicionales) + "\nFecha de inicio de la reserva: " 
 		+ to_string(fecha_inicio->getDia()) + "/" + to_string(fecha_inicio->getMes()) + "/" + to_string(fecha_inicio->getAnio()) 
-		+ "Fecha fin de reserva: " + to_string(fecha_findereserva->getDia()) + "/" + to_string(fecha_findereserva->getMes()) + "/" 
+		+ "\nFecha fin de reserva: " + to_string(fecha_findereserva->getDia()) + "/" + to_string(fecha_findereserva->getMes()) + "/" 
 		+ to_string(fecha_findereserva->getAnio());
 }
 

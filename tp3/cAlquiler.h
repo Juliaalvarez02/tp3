@@ -20,7 +20,7 @@ class cAlquiler
 	int cant_dias_alquilado;
 public:
 	cAlquiler();
-	cAlquiler(string Cliente,int cant, int monto);
+	cAlquiler(string Cliente,int cantAd,int cantDias, cVehiculo* vehiculoalquilado, cFecha* fecha_inicio, cFecha* fecha_findereserva);
 	~cAlquiler();
 	string toString();
 	void imprimir();
