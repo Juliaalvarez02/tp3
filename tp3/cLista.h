@@ -21,6 +21,9 @@ public:
 	void eliminar(unsigned int pos);
 	unsigned int getCA();
 	unsigned int getTam();
+	string toString();
+	T* operator[](unsigned int pos);
+	T* operator+(T* item);
 };
 
 template<class T>
@@ -141,3 +144,27 @@ inline unsigned int cLista<T>::getTam()
 {
 	return tam;
 }
+
+template<class T>
+inline string cLista<T>::toString()
+{
+	return to_string(lista);
+}
+
+template<class T>
+void operator<<(ostream& o, cLista<T>& object)
+{
+	o << object.toString() << endl;
+}
+
+template<class T>
+inline T* cLista<T>::operator[](unsigned int pos) {
+	return lista[pos];
+}
+
+template<class T>
+inline T* cLista<T>::operator+(T* item)
+{
+	return lista + agregarItem(item);
+}
+
