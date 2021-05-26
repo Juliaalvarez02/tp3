@@ -34,7 +34,7 @@ void cListaalquileres::listarXtipo(vehiculos vehiculoAImprimir)
 
 			if (p_Camioneta != NULL) {
 				camionetas[camionetas->getCA()].agregarItem(lista[i]->getVehiculo()) ;
-				camionetas->getCA()+1;
+				camionetas->sumarA_CA();
 				cout << camionetas << endl;
 			}
 		}
@@ -48,7 +48,7 @@ void cListaalquileres::listarXtipo(vehiculos vehiculoAImprimir)
 
 			if (p_Motocicleta != NULL) {
 				motos[motos->getCA()].agregarItem(lista[i]->getVehiculo());
-				motos->getCA()+1;
+				motos->sumarA_CA();
 				cout << motos << endl;
 			}
 		}
@@ -62,7 +62,7 @@ void cListaalquileres::listarXtipo(vehiculos vehiculoAImprimir)
 
 			if (p_automovil != NULL) {
 				autos[autos->getCA()].agregarItem(lista[i]->getVehiculo());
-				autos->getCA()+1;
+				autos->sumarA_CA();
 				cout << autos << endl;
 			}
 		}
@@ -76,7 +76,7 @@ void cListaalquileres::listarXtipo(vehiculos vehiculoAImprimir)
 
 			if (p_trafic != NULL) {
 				trafics[trafics->getCA()].agregarItem(lista[i]->getVehiculo());
-				trafics->getCA()+1;
+				trafics->sumarA_CA();
 				cout << trafics << endl;
 				
 			}
