@@ -58,15 +58,24 @@ int main() { //falta metodo listar
 	cout << "\nTarifa final vehiculo 1: " << TarifaFinal << endl;
 	TarifaFinal = alquiler2->calcularTarifa(asientosRebatibles);
 	cout << "Tarifa final vehiculo 2: " << TarifaFinal << endl;
+	
+	cEmpresa* empresa = new cEmpresa();
+	//empresa->adquirirNuevosVehiculos(new cVehiculo("HH402HH", "blanco", 180, 107, 250, 4, 500, &cFecha(8, 10, 2020)));
+	//empresa->realizarMantenimiento(vehiculo2);
+	//empresa->retirar_deCirculacion(vehiculo1);
+	empresa->agregarVehiculo(vehiculo1);
+	empresa->agregarVehiculo(vehiculo2);
+	empresa->agregarVehiculo(vehiculo3);
 
 	//Creo una lista de vehiculos y agrego los ya definidos (VER AGREGAR ITEM)
-	cLista<cVehiculo>* listavehiculos = new cLista<cVehiculo>();
-	listavehiculos->agregarItem(vehiculo1);
-	listavehiculos->agregarItem(vehiculo2);
-	listavehiculos->agregarItem(vehiculo3);
+	/*cLista<cVehiculo>* listavehiculos = new cLista<cVehiculo>();
+	bool agregar;
+	agregar = listavehiculos->agregarItem(vehiculo1);
+	agregar = listavehiculos->agregarItem(vehiculo2);
+	agregar= listavehiculos->agregarItem(vehiculo3);*/
 
 	//Creo una lista de alquileres y agrego los alquileres???!!!!
-	cLista<cAlquiler>* listaalquileres = new cLista<cAlquiler>();
+	cListaalquileres* listaalquileres = new cListaalquileres();
 	//cLista<cAlquiler>* listaalquileres = new cLista<cAlquiler>();
 	listaalquileres->agregarItem(alquiler1);
 	listaalquileres->agregarItem(alquiler2);
@@ -79,23 +88,11 @@ int main() { //falta metodo listar
 	listaclientes->agregarItem(cliente3);
 
 	//Creo la empresa y le paso las listas???!!!!
-	//cEmpresa* empresa = new cEmpresa(listaclientes, listavehiculos, listaalquileres);
-	//empresa->adquirirNuevosVehiculos(new cVehiculo("HH402HH", "blanco", 180, 107, 250, 4, 500, &cFecha(8, 10, 2020)));
-	//empresa->realizarMantenimiento(vehiculo2);
-	//empresa->retirar_deCirculacion(vehiculo1);
+	
 	
 
 	//Borro memoria
-	delete vehiculo1;
-	delete vehiculo2;
-	delete vehiculo3;
-	delete cliente1;
-	delete cliente2;
-	delete cliente3;
-	delete alquiler1;
-	delete alquiler2;
-	delete alquiler3;
 	delete listaalquileres;
 	delete listaclientes;
-	delete listavehiculos;
+	//delete listavehiculos;
 }
