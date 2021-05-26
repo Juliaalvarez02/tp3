@@ -20,6 +20,7 @@ public:
 	void Eliminar(T*item);
 	unsigned int getItempos(T* item);
 	void eliminar(unsigned int pos);
+	void sumarA_CA();
 	unsigned int getCA();
 	unsigned int getTam();
 	string toString();
@@ -154,6 +155,12 @@ inline void cLista<T>::eliminar(unsigned int pos)
 	}
 	else
 		throw new exception("no encontrado");
+}
+
+template<class T>
+inline void cLista<T>::sumarA_CA()
+{
+	CA++;
 }
 
 template<class T>
