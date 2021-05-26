@@ -68,7 +68,7 @@ string cVehiculo::toString()
 		"\nNumero de poliza: " + to_string(num_poliza) + "\nPrecio por dia: " + to_string(precioXdia) +
 		"\nCapacidad de pasajeros: " + to_string(capacidad_pasajeros) + "\nTarifa base: " + to_string(tarifaBase)
 	    + "\nFecha de ultimo mantenimiento: " + to_string(fecha_ult_mantenimiento->getDia()) + "/" 
-		+ to_string(fecha_ult_mantenimiento->getMes()) + "/" + to_string(fecha_ult_mantenimiento->getAnio());
+		+ to_string(fecha_ult_mantenimiento->getMes()) + "/" + to_string(fecha_ult_mantenimiento->getAnio()) + "\n";
 
 }
 

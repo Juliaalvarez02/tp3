@@ -13,7 +13,7 @@ cTrafics::~cTrafics()
 
 void cTrafics::pasosMantenimiento()
 {
-	cout << "\nPasos mantenimiento automovil: " << endl;
-	cout << "\nPirulito 1" << "\nPirulito 2" << "\nPirulito 3" << endl;
+	cout << "\nPasos mantenimiento trafic: " << endl;
+	cout << "P1" << "\nP2" << "\nP3" << endl;
 	cambiarFecha();
 }

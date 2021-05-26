@@ -13,7 +13,7 @@ cCamioneta::~cCamioneta()
 
 void cCamioneta::pasosMantenimiento()
 {
-	cout << "\nPasos mantenimiento automovil: " << endl;
-	cout << "\nPirulito 1" << "\nPirulito 2" << "\nPirulito 3" << endl;
+	cout << "\nPasos mantenimiento camioneta: " << endl;
+	cout << "Pepe 1" << "\nPepe 2" << "\nPepe 3" << endl;
 	cambiarFecha();
 }

@@ -14,6 +14,6 @@ cAutomovil::~cAutomovil()
 void cAutomovil::pasosMantenimiento()
 {
 	cout << "\nPasos mantenimiento automovil: " << endl;
-	cout << "\nPirulito 1" << "\nPirulito 2" << "\nPirulito 3" << endl;
+	cout << "Pepito 1" << "\nPepito 2" << "\nPepito 3" << endl;
 	cambiarFecha();
 }

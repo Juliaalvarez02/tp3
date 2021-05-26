@@ -11,7 +11,7 @@ class cCliente
 	cVehiculo *vehiculo_alquilado;
 public:
 	cCliente();
-	cCliente(string nombre);
+	cCliente(string nombre, cFecha* fechadealquiler, cVehiculo* vehiculo_alquilado);
 	~cCliente();
 	string toString();
 	void imprimir();
