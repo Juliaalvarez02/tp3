@@ -77,7 +77,7 @@ int main() {
 	vehiculo2->imprimir();
 	empresa->retirar_deCirculacion(vehiculo1);
 
-	empresa->listar(camioneta);
+	//empresa->listar(camioneta);
 
 	//Borro memoria
 	delete empresa;

@@ -13,6 +13,6 @@ class cListaalquileres :
 public:
 	cListaalquileres(unsigned int tam=NMAX);
 	~cListaalquileres();
-	void listarXtipo(vehiculos vehiculoAImprimir);
+	//void listarXtipo(vehiculos vehiculoAImprimir);
 };
 

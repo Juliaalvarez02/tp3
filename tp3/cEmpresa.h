@@ -19,6 +19,6 @@ public:
     bool agregarVehiculo(cVehiculo* nuevoVehiculo);
 	bool agregarCliente(cCliente* nuevoCliente);
 	bool agregarAlquiler(cAlquiler* nuevoAlquiler);
-	void listar(vehiculos vehiculoAImprimir);
+	//void listar(vehiculos vehiculoAImprimir);
 };
 

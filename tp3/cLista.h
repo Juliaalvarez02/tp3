@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
-#define NMAX 10
+#define NMAX 20
 using namespace std;
 template <class T>
 
@@ -89,7 +89,7 @@ inline bool cLista<T>::agregarItem(T * item)
 		return true;
 	}
 	else
-		throw new exception("\nno hay tamanio para agregarlo");	
+		throw new exception("\nNo hay tamanio para agregar");
 }
 
 template<class T>

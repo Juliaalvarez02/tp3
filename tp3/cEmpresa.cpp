@@ -63,10 +63,10 @@ bool cEmpresa::agregarAlquiler(cAlquiler* nuevoAlquiler)
 	}
 }
 
-void cEmpresa::listar(vehiculos vehiculoAImprimir)
-{
-	lista_alquiler->listarXtipo(vehiculoAImprimir);
-}
+//void cEmpresa::listar(vehiculos vehiculoAImprimir)
+//{
+//	lista_alquiler->listarXtipo(vehiculoAImprimir);
+//}
 
 
 
