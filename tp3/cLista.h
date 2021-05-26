@@ -83,15 +83,12 @@ inline bool cLista<T>::agregarItem(T * item)
 	if (i_f != NULL) {
 		throw new exception("\nya se encuentra en la lista");
 	}
-	for (int i = 0; i < tam; i++) {
-		if (CA < tam) {
-			lista[CA++] = item;
-			return true;
-		}
-		else
-			throw new exception("\nno hay tamanio para agregarlo");
+	if (CA < tam) {
+		lista[CA] = item;
+		return true;
 	}
-	
+	else
+		throw new exception("\nno hay tamanio para agregarlo");	
 }
 
 template<class T>
