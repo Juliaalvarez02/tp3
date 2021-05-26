@@ -21,7 +21,7 @@ class cAlquiler
 	adicionales adicional;
 public:
 	cAlquiler();
-	cAlquiler(string Cliente,int cantAd,int cantDias, cVehiculo* vehiculoalquilado, cFecha* fecha_inicio, cFecha* fecha_findereserva);
+	cAlquiler(string Cliente,int cantAd,int cantDias, cVehiculo* vehiculoalquilado, cFecha* fecha_inicio, cFecha* fecha_findereserva, adicionales ad);
 	~cAlquiler();
 	string toString();
 	void imprimir();

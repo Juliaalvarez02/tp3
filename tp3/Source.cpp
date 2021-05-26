@@ -13,9 +13,9 @@ int main() { //falta metodo listar
 	cAutomovil* automovil = new cAutomovil("GG505GG", "gris", 75, 106, 2000, 5, 1500, &cFecha(01, 02, 2021));
 
 	//Defino 3 alquileres
-	cAlquiler* alquiler1 = new cAlquiler("Pepito", 2, 4, vehiculo1, &cFecha(20, 5, 2021), &cFecha(24, 5, 2021));
-	cAlquiler* alquiler2 = new cAlquiler("Pampa", 1, 10, vehiculo2, &cFecha(10, 3, 2021), &cFecha(20, 3, 2021));
-	cAlquiler* alquiler3 = new cAlquiler("Flor", 0, 5, vehiculo3, &cFecha(10, 01, 2021), &cFecha(15, 01, 2021));
+	cAlquiler* alquiler1 = new cAlquiler("Pepito", 2, 4, vehiculo1, &cFecha(20, 5, 2021), &cFecha(24, 5, 2021), sillasSeguridad);
+	cAlquiler* alquiler2 = new cAlquiler("Pampa", 1, 10, vehiculo2, &cFecha(10, 3, 2021), &cFecha(20, 3, 2021), asientosRebatibles);
+	cAlquiler* alquiler3 = new cAlquiler("Flor", 0, 5, vehiculo3, &cFecha(10, 01, 2021), &cFecha(15, 01, 2021), cascos);
 
 	//Y 3 clientes para cada alquiler
 	cCliente* cliente1 = new cCliente("Pepito", &cFecha(20, 5, 2021), vehiculo1);
@@ -54,9 +54,9 @@ int main() { //falta metodo listar
 	alquiler3->imprimir();
 
 	//Pruebo metodo calcular tarifa e imprimo el monto total final 
-	int TarifaFinal = alquiler1->calcularTarifa(sillasSeguridad);
+	int TarifaFinal = alquiler1->calcularTarifa();
 	cout << "\nTarifa final vehiculo 1: " << TarifaFinal << endl;
-	TarifaFinal = alquiler2->calcularTarifa(asientosRebatibles);
+	TarifaFinal = alquiler2->calcularTarifa();
 	cout << "Tarifa final vehiculo 2: " << TarifaFinal << endl;
 	
 	cEmpresa* empresa = new cEmpresa();

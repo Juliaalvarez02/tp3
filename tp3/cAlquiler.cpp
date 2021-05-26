@@ -4,7 +4,7 @@ cAlquiler::cAlquiler()
 {
 }
 
-cAlquiler::cAlquiler(string Cliente, int cantAd, int cantDias, cVehiculo* vehiculoalquilado, cFecha* fecha_inicio, cFecha* fecha_findereserva)
+cAlquiler::cAlquiler(string Cliente, int cantAd, int cantDias, cVehiculo* vehiculoalquilado, cFecha* fecha_inicio, cFecha* fecha_findereserva, adicionales ad)
 {
 	cliente = Cliente;
 	this->vehiculoalquilado = vehiculoalquilado;
@@ -13,6 +13,7 @@ cAlquiler::cAlquiler(string Cliente, int cantAd, int cantDias, cVehiculo* vehicu
 	this->fecha_findereserva = fecha_findereserva;
 	monto_total = 0;
 	cant_dias_alquilado = cantDias;
+	adicional = ad;
 }
 
 cAlquiler::~cAlquiler()
