@@ -41,7 +41,7 @@ inline T* cLista<T>::operator+(T* item)
 template<class T>
 ostream& operator<<(ostream & o, cLista<T>& object)
 {
-	o << object[i].toString() << endl;
+	o << object.toString() << endl;
 	return o;
 }
 
