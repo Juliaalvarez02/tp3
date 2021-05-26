@@ -8,14 +8,14 @@ int main() { //falta metodo listar
 
 	//Defino 1 vehiculo de cada tipo
 	cMotocicleta* motocicleta = new cMotocicleta("DD222DD", "gris", 80, 103, 1850, 2, 4300, &cFecha(25, 03, 2020));
-	cCamioneta* camioneta = new cCamioneta("EE101EE", "negro", 85, 104, 1745, 5, 2000, &cFecha(02, 05, 2021));
+	cCamioneta* Camioneta = new cCamioneta("EE101EE", "negro", 85, 104, 1745, 5, 2000, &cFecha(02, 05, 2021));
 	cTrafics* trafic = new cTrafics("FF102FF", "azul", 90, 105, 3450, 6, 4000, &cFecha(4, 4, 2021));
 	cAutomovil* automovil = new cAutomovil("GG505GG", "gris", 75, 106, 2000, 5, 1500, &cFecha(01, 02, 2021));
 
 	//Defino 3 alquileres
-	cAlquiler* alquiler1 = new cAlquiler("Pepito", 2, 4, vehiculo1, &cFecha(20, 5, 2021), &cFecha(24, 5, 2021), sillasSeguridad);
-	cAlquiler* alquiler2 = new cAlquiler("Pampa", 1, 10, vehiculo2, &cFecha(10, 3, 2021), &cFecha(20, 3, 2021), asientosRebatibles);
-	cAlquiler* alquiler3 = new cAlquiler("Flor", 0, 5, vehiculo3, &cFecha(10, 01, 2021), &cFecha(15, 01, 2021), cascos);
+	cAlquiler* alquiler1 = new cAlquiler("Pepito", 2, 4, vehiculo1, &cFecha(20, 5, 2021), &cFecha(24, 5, 2021));
+	cAlquiler* alquiler2 = new cAlquiler("Pampa", 1, 10, vehiculo2, &cFecha(10, 3, 2021), &cFecha(20, 3, 2021));
+	cAlquiler* alquiler3 = new cAlquiler("Flor", 0, 5, vehiculo3, &cFecha(10, 01, 2021), &cFecha(15, 01, 2021));
 
 	//Y 3 clientes para cada alquiler
 	cCliente* cliente1 = new cCliente("Pepito", &cFecha(20, 5, 2021), vehiculo1);
@@ -33,7 +33,7 @@ int main() { //falta metodo listar
 
 	//Pruebo metodo pasosMantenimiento de cada tipo de vehiculo
 	motocicleta->pasosMantenimiento();
-	camioneta->pasosMantenimiento();
+	Camioneta->pasosMantenimiento();
 	trafic->pasosMantenimiento();
 	automovil->pasosMantenimiento();
 
@@ -54,45 +54,29 @@ int main() { //falta metodo listar
 	alquiler3->imprimir();
 
 	//Pruebo metodo calcular tarifa e imprimo el monto total final 
-	int TarifaFinal = alquiler1->calcularTarifa();
+	int TarifaFinal = alquiler1->calcularTarifa(sillasSeguridad);
 	cout << "\nTarifa final vehiculo 1: " << TarifaFinal << endl;
-	TarifaFinal = alquiler2->calcularTarifa();
+	TarifaFinal = alquiler2->calcularTarifa(asientosRebatibles);
 	cout << "Tarifa final vehiculo 2: " << TarifaFinal << endl;
 	
+	//Defino una empresa y le agrego los datos a las listas que tiene la empresa
 	cEmpresa* empresa = new cEmpresa();
-	//empresa->adquirirNuevosVehiculos(new cVehiculo("HH402HH", "blanco", 180, 107, 250, 4, 500, &cFecha(8, 10, 2020)));
-	//empresa->realizarMantenimiento(vehiculo2);
-	//empresa->retirar_deCirculacion(vehiculo1);
 	empresa->agregarVehiculo(vehiculo1);
 	empresa->agregarVehiculo(vehiculo2);
 	empresa->agregarVehiculo(vehiculo3);
+	empresa->agregarAlquiler(alquiler1);
+	empresa->agregarAlquiler(alquiler2);
+	empresa->agregarAlquiler(alquiler3);
+	empresa->agregarCliente(cliente1);
+	empresa->agregarCliente(cliente2);
+	empresa->agregarCliente(cliente3);
 
-	//Creo una lista de vehiculos y agrego los ya definidos (VER AGREGAR ITEM)
-	/*cLista<cVehiculo>* listavehiculos = new cLista<cVehiculo>();
-	bool agregar;
-	agregar = listavehiculos->agregarItem(vehiculo1);
-	agregar = listavehiculos->agregarItem(vehiculo2);
-	agregar= listavehiculos->agregarItem(vehiculo3);*/
+	empresa->adquirirNuevosVehiculos(new cVehiculo("HH402HH", "blanco", 180, 107, 250, 4, 500, &cFecha(8, 10, 2020)));
+	empresa->realizarMantenimiento(vehiculo2);
+	empresa->retirar_deCirculacion(vehiculo1);
 
-	//Creo una lista de alquileres y agrego los alquileres???!!!!
-	cListaalquileres* listaalquileres = new cListaalquileres();
-	//cLista<cAlquiler>* listaalquileres = new cLista<cAlquiler>();
-	listaalquileres->agregarItem(alquiler1);
-	listaalquileres->agregarItem(alquiler2);
-	listaalquileres->agregarItem(alquiler3);
-
-	//Creo lista de clientes y agrego los clientes
-	cLista<cCliente>* listaclientes = new cLista<cCliente>();
-	listaclientes->agregarItem(cliente1);
-	listaclientes->agregarItem(cliente2);
-	listaclientes->agregarItem(cliente3);
-
-	//Creo la empresa y le paso las listas???!!!!
-	
-	
+	empresa->listar(camioneta);
 
 	//Borro memoria
-	delete listaalquileres;
-	delete listaclientes;
-	//delete listavehiculos;
+	delete empresa;
 }

@@ -4,7 +4,7 @@ cAlquiler::cAlquiler()
 {
 }
 
-cAlquiler::cAlquiler(string Cliente, int cantAd, int cantDias, cVehiculo* vehiculoalquilado, cFecha* fecha_inicio, cFecha* fecha_findereserva, adicionales ad)
+cAlquiler::cAlquiler(string Cliente, int cantAd, int cantDias, cVehiculo* vehiculoalquilado, cFecha* fecha_inicio, cFecha* fecha_findereserva)
 {
 	cliente = Cliente;
 	this->vehiculoalquilado = vehiculoalquilado;
@@ -13,7 +13,6 @@ cAlquiler::cAlquiler(string Cliente, int cantAd, int cantDias, cVehiculo* vehicu
 	this->fecha_findereserva = fecha_findereserva;
 	monto_total = 0;
 	cant_dias_alquilado = cantDias;
-	adicional = ad;
 }
 
 cAlquiler::~cAlquiler()
@@ -39,7 +38,7 @@ cVehiculo* cAlquiler::getVehiculo()
 	return vehiculoalquilado;
 }
 
-int cAlquiler::calcularTarifa()
+int cAlquiler::calcularTarifa(adicionales adicional)
 {
 	switch (adicional) {
 	case cascos:
@@ -56,6 +55,12 @@ int cAlquiler::calcularTarifa()
 		monto_total = vehiculoalquilado->getTarifaBase() + ((vehiculoalquilado->getPrecioxDia() + precioAsientosRebatibles)*cant_dias_alquilado);
 		break;
 	}
+	return monto_total;
+}
+
+int cAlquiler::montoTotal()
+{
+	monto_total = vehiculoalquilado->getTarifaBase() + (vehiculoalquilado->getPrecioxDia() * cant_dias_alquilado);
 	return monto_total;
 }
 

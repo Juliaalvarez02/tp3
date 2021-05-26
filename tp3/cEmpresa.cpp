@@ -30,11 +30,12 @@ void cEmpresa::retirar_deCirculacion(cVehiculo* vehiculoRetirado)
 		listavehiculos->Eliminar(vehiculoRetirado);
 }
 
-void cEmpresa::realizarMantenimiento(cVehiculo* vehiculoMantenido)
+bool cEmpresa::realizarMantenimiento(cVehiculo* vehiculoMantenido)
 {
 	for (int i = 0; i < listavehiculos->getCA(); i++) {
 		listavehiculos[i].buscaritem(vehiculoMantenido);
 		vehiculoMantenido->cambiarFecha();
+		return true;
 	}
 }
 
@@ -44,6 +45,27 @@ bool cEmpresa::agregarVehiculo(cVehiculo* nuevoVehiculo)
 		listavehiculos[i].agregarItem(nuevoVehiculo);
 		return true;
 	}
+}
+
+bool cEmpresa::agregarCliente(cCliente* nuevoCliente)
+{
+	for (int i = 0; i < listaclientes->getTam(); i++) {
+		listaclientes[i].agregarItem(nuevoCliente);
+		return true;
+	}
+}
+
+bool cEmpresa::agregarAlquiler(cAlquiler* nuevoAlquiler)
+{
+	for (int i = 0; i < lista_alquiler->getTam(); i++) {
+		lista_alquiler[i].agregarItem(nuevoAlquiler);
+		return true;
+	}
+}
+
+void cEmpresa::listar(vehiculos vehiculoAImprimir)
+{
+	lista_alquiler->listarXtipo(vehiculoAImprimir);
 }
 
 

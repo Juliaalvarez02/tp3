@@ -15,8 +15,10 @@ public:
 	~cEmpresa();
 	void adquirirNuevosVehiculos(cVehiculo* nuevoVehiculo);
 	void retirar_deCirculacion(cVehiculo* vehiculoRetirado);
-	void realizarMantenimiento(cVehiculo* vehiculoMantenido);
+	bool realizarMantenimiento(cVehiculo* vehiculoMantenido);
     bool agregarVehiculo(cVehiculo* nuevoVehiculo);
-	
+	bool agregarCliente(cCliente* nuevoCliente);
+	bool agregarAlquiler(cAlquiler* nuevoAlquiler);
+	void listar(vehiculos vehiculoAImprimir);
 };
 
