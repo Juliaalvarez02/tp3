@@ -18,6 +18,7 @@ class cAlquiler
 	cFecha *fecha_findereserva;
 	int monto_total;
 	int cant_dias_alquilado;
+	adicionales adicional;
 public:
 	cAlquiler();
 	cAlquiler(string Cliente,int cantAd,int cantDias, cVehiculo* vehiculoalquilado, cFecha* fecha_inicio, cFecha* fecha_findereserva);
@@ -25,6 +26,6 @@ public:
 	string toString();
 	void imprimir();
 	cVehiculo* getVehiculo();
-	int calcularTarifa(adicionales adicional);
+	int calcularTarifa();
 };
 

@@ -38,7 +38,7 @@ cVehiculo* cAlquiler::getVehiculo()
 	return vehiculoalquilado;
 }
 
-int cAlquiler::calcularTarifa(adicionales adicional)
+int cAlquiler::calcularTarifa()
 {
 	switch (adicional) {
 	case cascos:

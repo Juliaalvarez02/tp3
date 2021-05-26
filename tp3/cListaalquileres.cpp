@@ -11,6 +11,7 @@ cListaalquileres::~cListaalquileres()
 
 void cListaalquileres::listarXtipo(vehiculos vehiculoAImprimir)
 {
+	int ganancia_total = 0;
 	cLista<cVehiculo>* motos = new cLista<cVehiculo>;
 	cLista<cVehiculo>* autos = new cLista<cVehiculo>;
 	cLista<cVehiculo>* trafics = new cLista<cVehiculo>;
@@ -36,6 +37,7 @@ void cListaalquileres::listarXtipo(vehiculos vehiculoAImprimir)
 				camionetas[camionetas->getCA()].agregarItem(lista[i]->getVehiculo()) ;
 				camionetas->sumarA_CA();
 				cout << camionetas << endl;
+				ganancia_total = ganancia_total + lista[i]->calcularTarifa();
 			}
 		}
 		break;
@@ -50,6 +52,7 @@ void cListaalquileres::listarXtipo(vehiculos vehiculoAImprimir)
 				motos[motos->getCA()].agregarItem(lista[i]->getVehiculo());
 				motos->sumarA_CA();
 				cout << motos << endl;
+				ganancia_total = ganancia_total + lista[i]->calcularTarifa();
 			}
 		}
 		break;
@@ -64,6 +67,7 @@ void cListaalquileres::listarXtipo(vehiculos vehiculoAImprimir)
 				autos[autos->getCA()].agregarItem(lista[i]->getVehiculo());
 				autos->sumarA_CA();
 				cout << autos << endl;
+				ganancia_total = ganancia_total + lista[i]->calcularTarifa();
 			}
 		}
 		break;
@@ -78,7 +82,7 @@ void cListaalquileres::listarXtipo(vehiculos vehiculoAImprimir)
 				trafics[trafics->getCA()].agregarItem(lista[i]->getVehiculo());
 				trafics->sumarA_CA();
 				cout << trafics << endl;
-				
+				ganancia_total = ganancia_total + lista[i]->calcularTarifa();
 			}
 		}
 		break;
