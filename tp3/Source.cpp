@@ -1,6 +1,6 @@
 #include "Includes.h"
 
-int main() { //falta metodo listar
+int main() { 
 	//Defino 3 vehiculos
 	cVehiculo *vehiculo1 = new cVehiculo("AA555AA", "rojo", 25, 100, 1500, 5, 3000, &cFecha(1,1,1));
 	cVehiculo* vehiculo2 = new cVehiculo("BB444BB", "blanco", 48, 101, 1500, 5, 2500,&cFecha(10,3,2021));
@@ -13,12 +13,12 @@ int main() { //falta metodo listar
 	cAutomovil* Automovil = new cAutomovil("GG505GG", "gris", 75, 106, 2000, 5, 1500, &cFecha(01, 02, 2021));
 
 	//Defino 3 alquileres
-	cAlquiler* alquiler1 = new cAlquiler("Pepito", 2, 4, vehiculo1, &cFecha(20, 5, 2021), &cFecha(24, 5, 2021));
+	cAlquiler* alquiler1 = new cAlquiler("Damian", 2, 4, vehiculo1, &cFecha(20, 5, 2021), &cFecha(24, 5, 2021));
 	cAlquiler* alquiler2 = new cAlquiler("Pampa", 1, 10, vehiculo2, &cFecha(10, 3, 2021), &cFecha(20, 3, 2021));
 	cAlquiler* alquiler3 = new cAlquiler("Flor", 0, 5, vehiculo3, &cFecha(10, 01, 2021), &cFecha(15, 01, 2021));
 
 	//Y 3 clientes para cada alquiler
-	cCliente* cliente1 = new cCliente("Pepito", &cFecha(20, 5, 2021), vehiculo1);
+	cCliente* cliente1 = new cCliente("Damian", &cFecha(20, 5, 2021), vehiculo1);
 	cCliente* cliente2 = new cCliente("Pampa", &cFecha(10, 3, 2021), vehiculo2);
 	cCliente* cliente3 = new cCliente("Flor", &cFecha(10, 01, 2021), vehiculo3);
 
@@ -73,6 +73,7 @@ int main() { //falta metodo listar
 
 	empresa->adquirirNuevosVehiculos(new cVehiculo("HH402HH", "blanco", 180, 107, 250, 4, 500, &cFecha(8, 10, 2020)));
 	empresa->realizarMantenimiento(vehiculo2);
+	cout << "Vehiculo 2 con fecha actualizada: " << endl;
 	vehiculo2->imprimir();
 	empresa->retirar_deCirculacion(vehiculo1);
 
