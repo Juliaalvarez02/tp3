@@ -85,6 +85,7 @@ inline bool cLista<T>::agregarItem(T * item)
 	}
 	if (CA < tam) {
 		lista[CA] = item;
+		CA++;
 		return true;
 	}
 	else
