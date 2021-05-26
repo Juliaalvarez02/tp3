@@ -38,6 +38,14 @@ void cEmpresa::realizarMantenimiento(cVehiculo* vehiculoMantenido)
 	}
 }
 
+bool cEmpresa::agregarVehiculo(cVehiculo* nuevoVehiculo)
+{
+	for (int i = 0; i < listavehiculos->getTam(); i++) {
+		listavehiculos[i].agregarItem(nuevoVehiculo);
+		return true;
+	}
+}
+
 
 
 

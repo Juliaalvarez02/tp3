@@ -59,13 +59,20 @@ int main() { //falta metodo listar
 	TarifaFinal = alquiler2->calcularTarifa(asientosRebatibles);
 	cout << "Tarifa final vehiculo 2: " << TarifaFinal << endl;
 	
+	cEmpresa* empresa = new cEmpresa();
+	//empresa->adquirirNuevosVehiculos(new cVehiculo("HH402HH", "blanco", 180, 107, 250, 4, 500, &cFecha(8, 10, 2020)));
+	//empresa->realizarMantenimiento(vehiculo2);
+	//empresa->retirar_deCirculacion(vehiculo1);
+	empresa->agregarVehiculo(vehiculo1);
+	empresa->agregarVehiculo(vehiculo2);
+	empresa->agregarVehiculo(vehiculo3);
 
 	//Creo una lista de vehiculos y agrego los ya definidos (VER AGREGAR ITEM)
-	cLista<cVehiculo>* listavehiculos = new cLista<cVehiculo>();
+	/*cLista<cVehiculo>* listavehiculos = new cLista<cVehiculo>();
 	bool agregar;
 	agregar = listavehiculos->agregarItem(vehiculo1);
 	agregar = listavehiculos->agregarItem(vehiculo2);
-	agregar= listavehiculos->agregarItem(vehiculo3);
+	agregar= listavehiculos->agregarItem(vehiculo3);*/
 
 	//Creo una lista de alquileres y agrego los alquileres???!!!!
 	cListaalquileres* listaalquileres = new cListaalquileres();
@@ -81,14 +88,11 @@ int main() { //falta metodo listar
 	listaclientes->agregarItem(cliente3);
 
 	//Creo la empresa y le paso las listas???!!!!
-	cEmpresa* empresa = new cEmpresa();
-	//empresa->adquirirNuevosVehiculos(new cVehiculo("HH402HH", "blanco", 180, 107, 250, 4, 500, &cFecha(8, 10, 2020)));
-	//empresa->realizarMantenimiento(vehiculo2);
-	//empresa->retirar_deCirculacion(vehiculo1);
+	
 	
 
 	//Borro memoria
 	delete listaalquileres;
 	delete listaclientes;
-	delete listavehiculos;
+	//delete listavehiculos;
 }
