@@ -25,8 +25,31 @@ public:
 	string toString();
 	T* operator[](unsigned int pos);
 	T* operator+(T* item);
-	//void listar(cVehiculo* vehiculoAimprimir);
 };
+
+template<class T>
+inline T* cLista<T>::operator[](unsigned int pos) {
+	return lista[pos];
+}
+
+template<class T>
+inline T* cLista<T>::operator+(T* item)
+{
+	return lista[CA] + agregarItem(item);
+}
+
+template<class T>
+ostream& operator<<(ostream & o, cLista<T>& object)
+{
+	o << object[i].toString() << endl;
+	return o;
+}
+
+template<class T>
+inline void cLista<T>::Eliminar(T * item)
+{
+	eliminar(getItempos(item));
+}
 
 template<class T>
 inline cLista<T>::cLista(unsigned int tam)
@@ -105,12 +128,6 @@ inline T * cLista<T>::quitarEnPos(unsigned int pos)
 }
 
 template<class T>
-inline void cLista<T>::Eliminar(T * item)
-{
-	eliminar(getItempos(item));
-}
-
-template<class T>
 inline unsigned int cLista<T>::getItempos(T* item)
 {
 	for (unsigned int i = 0; i < CA; i++) {
@@ -157,22 +174,7 @@ inline string cLista<T>::toString()
 	return miString;
 }
 
-template<class T>
-void operator<<(ostream& o, cLista<T>& object)
-{
-	o << object.toString() << endl;
-}
 
 
-template<class T>
-inline T* cLista<T>::operator[](unsigned int pos) {
-	return lista[pos];
-}
-
-template<class T>
-inline T* cLista<T>::operator+(T* item)
-{
-	return lista[CA] + agregarItem(item);
-}
 
 

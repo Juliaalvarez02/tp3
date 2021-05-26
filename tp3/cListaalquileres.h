@@ -5,6 +5,7 @@
 #include "cAutomovil.h"
 #include "cCamioneta.h"
 #include "cTrafics.h"
+typedef enum { camioneta, motocicleta, automovil, trafic } vehiculos;
 
 class cListaalquileres :
 	public cLista<cAlquiler>
@@ -12,6 +13,6 @@ class cListaalquileres :
 public:
 	cListaalquileres(unsigned int tam=NMAX);
 	~cListaalquileres();
-	void listarXtipo(cVehiculo* vehiculo);
+	void listarXtipo(vehiculos vehiculoAImprimir);
 };
 

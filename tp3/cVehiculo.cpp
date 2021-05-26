@@ -25,9 +25,6 @@ void cVehiculo::cambiarFecha()
 {
 
 	if (fecha_ult_mantenimiento != NULL) {
-		/*int dia = fecha_ult_mantenimiento->getDia();
-		int mes = fecha_ult_mantenimiento->getMes();
-		int anio = fecha_ult_mantenimiento->getAnio();*/
 		int dia, mes, anio;
 		time_t now = time(0);
 		tm* ltm = localtime(&now);
